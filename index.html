@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bio Data</title>
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata">
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+		* {
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+			font-family: "Source Sans Pro";
+		}
+		body {
+			width: 100%;
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.main-box {
+			position: relative;
+			width: 400px;
+			height: 450px;
+			perspective: 1000px;
+		}
+		.box2 {
+			background: #6DC4F2;
+			transform: translateX(200px) rotateY(90deg);
+			transition: 0.3 ease;
+		}
+		.face {
+			position: absolute;
+			width: 400px;
+			height: 450px;
+			border-radius: 16px;
+			transform-origin: 50% 50%;
+			backface-visibility: hidden;
+			transition: 0.3s ease;
+		}
+		.main-box:hover .box1 {
+			transform: translateX(-200px) rotateY(-90deg);
+		}
+		.main-box:hover .box2 {
+			transform: translateX(0px) rotateY(0deg);
+		}
+		.profile-pic {
+			width: 100%;
+		}
+		.box1 {
+			overflow: hidden;
+			transition: 0.3 ease;
+		}
+		.biotable {
+			width: 100%;
+		}
+		.biotabl h2 {
+			color: #fff;
+		}
+		.main-title {
+			color: #fff;
+			text-transform: uppercase;
+		}
+		.next-button {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 15px 30px;
+			background: #4195bf;
+			border-radius: 50px 50px 0 0;
+			color: #fff;
+		}
+		.image-cover {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(to top,rgba(0,0,0,0.6),transparent 30%);
+		}
+		.my-name {
+			position: absolute;
+			bottom: 10px;
+			left: 0;
+			right: 0;
+			color: #fff;
+			font-size: 40px;
+			font-weight: bold;
+		}
+		.resume-title {
+			position: absolute;
+			opacity: 0.01;
+			font-size: 13vw;
+			font-weight: bold;
+			transform: rotate(90deg);
+			top: 0;
+			left: 200px;
+			bottom: 0;
+			transform-origin: 0 0;
+		}
+		.ring-box {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			top: 10px;
+			right: 10px;
+		}
+		.ring {
+			width: 50px;
+			height: 50px;
+			background: radial-gradient(rgba(255,255,255,0.1),rgba(255,255,255,1));
+			border-radius: 100px;
+			animation: ring 2s infinite ease;
+		}
+		@keyframes ring {
+			from {
+				opacity: 1;
+				transform: scale(0);
+			}
+			to {
+				opacity: 0;
+				transform: scale(1);
+			}
+		}
+		.bio-table label {
+			color: #d8f2ff;
+		}
+		.create-new-button {
+			padding: 8px 32px;
+			background: linear-gradient(rgb(84, 84, 255),blue);
+			color: white;
+			font-weight: bold;
+			border-radius: 8px;
+			position: absolute;
+			bottom: 5%;
+			right: 3%;
+		}
+		.create-new-button span {
+			font-size: 20px;
+			padding-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="resume-title">RESUME</h1>
+<center>
+
+	<div class="main-box">
+		<div class="box1 face">
+			<img src="https://s3.ap-south-1.amazonaws.com/mckadocs/students/19PMC335WiSgUfnDBHenMs7X.jpg" width="250px" class="profile-pic">
+			<div class="image-cover"></div>
+			<h1 class="my-name">Kamal E J</h1>
+
+			<div class="ring-box">
+				<div class="ring"></div>
+			</div>
+
+		</div>
+		<div class="box2 face">
+	<table class="bio-table" cellspacing="20">
+		<tr>
+			<td colspan="2" align="center">
+				
+			</td>
+		</tr>
+		<tr style="height: 100px;">
+			<td colspan="2" align="center">
+				<h2 class="main-title">More Informations</h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Date of Birth</label>
+			</td>
+			<td align="right">
+				<strong><label>11-03-1997</label></strong>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Mobile</label>
+			</td>
+			<td align="right">
+				<strong><label>7025396023</label></strong>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Email</label>
+			</td>
+			<td align="right">
+				<strong><label>kamal.19pmc335@mcka.in</label></strong>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Gender</label>
+			</td>
+			<td align="right">
+				<strong><label>Male</label></strong>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Mobile</label>
+			</td>
+			<td align="right">
+				<strong><label>7025396023</label></strong>
+			</td>
+		</tr>
+	</table>
+	<a class="next-button" href="marklist.html">Click to View Marklist</a>
+		</div>
+	</div>
+</center>
+<a href="information.html" class="create-new-button"> <span>+</span> Create New</a>
+</body>
+</html>

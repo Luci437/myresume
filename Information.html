@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal Details</title>
+	<link rel="stylesheet" type="text/css" href="formstyle.css">
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<body>
+	<script type="text/javascript">
+		let el = document.getElementById('dob');
+		el.max = "2020-08-8";
+		let newdate = new Date();
+		el.value = newdate.today();
+	</script>
+	<center>
+<form name="info" onsubmit="checkdetails();">
+	<table class="form-table">
+		<tr>
+			<td>
+				<div class="sub-box">
+					<input id="name" type="text" name="name" required class="input-box">
+					<label for="name" class="input-label">Full Name</label>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="sub-box">
+					<input id="email" type="email" name="email" required class="input-box">
+					<label for="email" class="input-label">Email</label>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="sub-box">
+					<input id="dob" max="2020-08-10" type="date" name="dob" class="input-box">
+					<label for="dob" class="input-label">Date of Birth</label>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="sub-box">
+					<input id="mobile" type="text" maxlength="10" onkeypress="return isNumberKey(event)" name="mobile" required class="input-box" onchange="mobilecheck()"
+					>
+					<label for="mobile" class="input-label">Mobile number</label>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span style="display: flex; width:300px;padding: 10px;height: 50px;">
+					<div class="sub-box">
+						<input id="female" type="radio" name="gender" required class="gender-input">
+						<label for="female" class="input-label-gender">Female</label>
+					</div>
+					<div class="sub-box">
+						<input id="male" type="radio" name="gender" required class="gender-input">
+						<label for="male" class="input-label-gender">Male</label>
+					</div>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="sub-box">
+					<input id="percentage" maxlength="5" onchange="percentagecheck()" type="text" maxlength="10" name="percentage" required class="input-box">
+					<label for="percentage" class="input-label">Mark Percentage</label>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="submit" value="Save Data" class="submit-button">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h6 id="form-error">*Invalid Mobile number</h6>
+			</td>
+		</tr>
+	</table>
+</form>
+<script type="text/javascript">
+	function isNumberKey(evt)
+	{
+	 var charCode = (evt.which) ? evt.which : event.keyCode
+	 if (charCode > 31 && (charCode < 48 || charCode > 57))
+	    return false;
+
+	 return true;
+	}
+</script>
+</center>
+</body>
+<script type="text/javascript" src="form.js"></script>
+</html>
