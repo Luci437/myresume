@@ -95,7 +95,9 @@ body {
 	background: linear-gradient(to top,#e0e000,#c9c900);
 }
 #form-error {
-	color: red;
+	color: rgb(255, 255, 255);
 	line-height: 2;
 	display: none;
+	font-weight: bold;
+	font-size: 12px;
 }
